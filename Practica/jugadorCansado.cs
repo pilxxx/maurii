@@ -65,7 +65,7 @@ namespace JugadorCansado
             tiempoCorriendo += min;
             if (tiempoCorriendo > limite)
             {
-                Console.WriteLine($"Corrí {mins} mins... necesito descanso!");
+                Console.WriteLine($"Corrí {mins} mins... necesito descanso! porque soy un skibidi dopdop");
             }
             else
             {
@@ -83,7 +83,7 @@ namespace JugadorCansado
         {
             tiempoCorriendo -= mins;
             if (tiempoCorriendo < 0) tiempoCorriendo = 0;
-            Console.WriteLine($"Descansando {mins} minutos... mejor!");
+            Console.WriteLine($"Descansando {mins} minutos... ya no soy un skibidi dopdop");
         }
     }
 
@@ -93,7 +93,7 @@ namespace JugadorCansado
         {
             // Probando el amateur
             IJugador amateur = new Amateur();
-            Console.WriteLine("--- AMATEUR ---");
+            Console.WriteLine("--- AMATEUR (bruh...) ---");
             amateur.Correr(8);
             amateur.Correr(7);
             amateur.Correr(10); // debería cansarse
@@ -103,7 +103,7 @@ namespace JugadorCansado
             
             // Probando el pro
             IJugador pro = new Profesional();
-            Console.WriteLine("\n--- PROFESIONAL ---");
+            Console.WriteLine("\n--- PRO (tomá) ---");
             pro.Correr(25);
             pro.Correr(20); // justo en el límite
             pro.Correr(1); // ya no puede
