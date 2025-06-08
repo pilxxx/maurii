@@ -15,7 +15,6 @@ namespace JugadorCansado
     {
         private int totalCorrido = 0;
         private const int maximo = 20; // amateur aguanta 20 mins
-        
         public bool Correr(int mins)
         {
             // Si ya está cansado no puede correr
@@ -26,7 +25,6 @@ namespace JugadorCansado
             }
             
             totalCorrido += mins;
-            
             // Verificar si después de correr se cansó
             if (totalCorrido >= maximo)
             {
@@ -36,7 +34,6 @@ namespace JugadorCansado
             {
                 Console.WriteLine($"Corrí {mins} minutos, todo bien.");
             }
-            
             return true;
         }
         
@@ -65,9 +62,7 @@ namespace JugadorCansado
                 Console.WriteLine("Estoy demasiado cansado para correr ahora");
                 return false;
             }
-            
-            tiempoCorriendo += mins;
-            
+            tiempoCorriendo += min;
             if (tiempoCorriendo > limite)
             {
                 Console.WriteLine($"Corrí {mins} mins... necesito descanso!");
@@ -84,7 +79,6 @@ namespace JugadorCansado
         {
             return tiempoCorriendo >= limite;
         }
-        
         public void Descansar(int mins)
         {
             tiempoCorriendo -= mins;
