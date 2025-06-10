@@ -59,4 +59,6 @@ class Sanatorio
 
         Console.WriteLine("Intervención asignada correctamente!!");
     }
-//ok lol creo que ya está?? no se:(
+//ok lol creo que ya está?? (el punto c nomás) no se:(
+//d: Calcular el costo de las intervenciones de un paciente dado su DNI.
+def calcularCostoPaciente(self
