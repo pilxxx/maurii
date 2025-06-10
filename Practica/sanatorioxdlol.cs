@@ -61,4 +61,13 @@ class Sanatorio
     }
 //ok lol creo que ya está?? (el punto c nomás) no se:(
 //d: Calcular el costo de las intervenciones de un paciente dado su DNI.
-def calcularCostoPaciente(self
+def calcularCostoPaciente(self, dni):
+    for paciente in self.pacientes:
+        if paciente.dni == dni:
+              total = 0
+                  for intervencion in paciente.intervenciones:
+                        total += intervencion.arancel
+                    if  paciente.obra_social: 
+                        total = total * paciente.obra_social
+                    return total
+                return "Paciente no encontrado!"
