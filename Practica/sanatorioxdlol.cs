@@ -18,6 +18,7 @@ class Sanatorio
     public List<Paciente> pacientes = new List<Paciente>();
     public List<Intervencion> intervenciones = new List<Intervencion>();
     public List<Medico> medicos = new List<Medico>();
+    private static int ultimoIdIntervencion = 1;
     public void AsignarIntervencion(int dniPaciente, string codIntervencion, string matriculaMedico, DateTime fecha)
     {
         Paciente paciente = pacientes.Find(p => p.Dni == dniPaciente);
@@ -32,6 +33,12 @@ class Sanatorio
         if (intervencion == null)
         {
             Console.WriteLine("No existe la intervencióm");
+            return;
+        }
+        Medico medico = medicos.Find(m => m.Matricula == matriculaMedico);
+        if (medico == null)
+        {
+            Console.WriteLine("Médico no encontrado.");
             return;
         }
       if (medico.Especialidad != intervencion.Especialidad)
@@ -52,3 +59,4 @@ class Sanatorio
 
         Console.WriteLine("Intervención asignada correctamente!!");
     }
+//ok lol creo que ya está?? no se:(
